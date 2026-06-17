@@ -21,7 +21,6 @@ export class UsersController {
   // GET /users or /users?role=value
   @Get()
   findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
-    console.log(role);
     return this.usersService.findAll(role);
   }
 
